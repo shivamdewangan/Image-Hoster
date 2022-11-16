@@ -54,13 +54,13 @@ public class UserControllerTest {
                 User user = new User();
                 UserProfile userProfile = new UserProfile();
                 userProfile.setId(1);
-                userProfile.setEmailAddress("a@gmail.com");
-                userProfile.setFullName("Abhi Mahajan");
+                userProfile.setEmailAddress("shivamsubam@gmail.com");
+                userProfile.setFullName("Shivam Dewangan");
                 userProfile.setMobileNumber("9876543210");
                 user.setProfile(userProfile);
                 user.setId(1);
-                user.setUsername("Abhi");
-                user.setPassword("password");
+                user.setUsername("Shivam");
+                user.setPassword("psw1@");
 
                 this.mockMvc.perform(post("/users/registration").flashAttr("user", user)).andExpect(model().attribute(
                                 "passwordTypeError",
@@ -75,13 +75,13 @@ public class UserControllerTest {
                 User user = new User();
                 UserProfile userProfile = new UserProfile();
                 userProfile.setId(1);
-                userProfile.setEmailAddress("a@gmail.com");
-                userProfile.setFullName("Abhi Mahajan");
+                userProfile.setEmailAddress("shivamsubam@gmail.com");
+                userProfile.setFullName("Shivam Dewangan");
                 userProfile.setMobileNumber("9876543210");
                 user.setProfile(userProfile);
                 user.setId(1);
-                user.setUsername("Abhi");
-                user.setPassword("password1@");
+                user.setUsername("Shivam");
+                user.setPassword("psw1@");
 
                 this.mockMvc.perform(post("/users/registration").flashAttr("user", user))
                                 .andExpect(view().name("users/login"))
@@ -104,8 +104,8 @@ public class UserControllerTest {
         @Test
         public void signinWithWrongCredentials() throws Exception {
                 User userSignin = new User();
-                userSignin.setUsername("Abhi");
-                userSignin.setPassword("password1@");
+                userSignin.setUsername("Shivam");
+                userSignin.setPassword("psw1@");
 
                 Mockito.when(userService.login(Mockito.anyObject())).thenReturn(null);
                 session = new MockHttpSession();
@@ -123,17 +123,17 @@ public class UserControllerTest {
                 User user = new User();
                 UserProfile userProfile = new UserProfile();
                 userProfile.setId(1);
-                userProfile.setEmailAddress("a@gmail.com");
-                userProfile.setFullName("Abhi Mahajan");
+                userProfile.setEmailAddress("shivamsubam@gmail.com");
+                userProfile.setFullName("Shivam Dewangan");
                 userProfile.setMobileNumber("9876543210");
                 user.setProfile(userProfile);
                 user.setId(1);
-                user.setUsername("Abhi");
-                user.setPassword("password");
+                user.setUsername("Shivam");
+                user.setPassword("psw1@");
 
                 User userSignin = new User();
-                userSignin.setUsername("Abhi");
-                userSignin.setPassword("password1@");
+                userSignin.setUsername("Shivam");
+                userSignin.setPassword("psw1@");
 
                 Mockito.when(userService.login(Mockito.anyObject())).thenReturn(user);
                 session = new MockHttpSession();
@@ -150,13 +150,13 @@ public class UserControllerTest {
                 User user = new User();
                 UserProfile userProfile = new UserProfile();
                 userProfile.setId(1);
-                userProfile.setEmailAddress("a@gmail.com");
-                userProfile.setFullName("Abhi Mahajan");
+                userProfile.setEmailAddress("shivamsubam@gmail.com");
+                userProfile.setFullName("Shivam Dewangan");
                 userProfile.setMobileNumber("9876543210");
                 user.setProfile(userProfile);
                 user.setId(1);
-                user.setUsername("Abhi");
-                user.setPassword("password");
+                user.setUsername("Shivam");
+                user.setPassword("psw1@");
 
                 session = new MockHttpSession();
                 session.setAttribute("loggeduser", user);

@@ -41,13 +41,13 @@ public class CommentControllerTest {
         User user = new User();
         UserProfile userProfile = new UserProfile();
         userProfile.setId(1);
-        userProfile.setEmailAddress("a@gmail.com");
-        userProfile.setFullName("Abhi Mahajan");
+        userProfile.setEmailAddress("shivamsubam@gmail.com");
+        userProfile.setFullName("Shivam Dewangan");
         userProfile.setMobileNumber("9876543210");
         user.setProfile(userProfile);
         user.setId(1);
-        user.setUsername("Abhi");
-        user.setPassword("password1@");
+        user.setUsername("SHivam");
+        user.setPassword("psw1@");
 
         session = new MockHttpSession();
         session.setAttribute("loggeduser", user);
